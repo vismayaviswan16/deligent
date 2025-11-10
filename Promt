@@ -1,0 +1,31 @@
+Promt 1:
+You are an experienced full-stack developer. Generate a technical architecture document for an e-commerce website using React.js( for frontend), Node.js with Express.js(for backend), and MongoDB Atlas(for database).
+Include:
+1. High-level system architecture diagram showing frontend, backend, and database layers
+2. Component architecture for React frontend with routing structure
+3. Backend API architecture with RESTful endpoints
+4. Database schema design for products, users, orders, and cart collections
+5. Authentication flow using JWT tokens
+6. Data flow diagrams showing user interactions from browsing to checkout
+7. Technology stack justification for each layer
+8. Scalability considerations and best practices
+9. Security architecture including encryption and data protection
+Format the output as a professional technical document with sections and subsections.
+
+Promt 2:
+Design MongoDB schemas for an e-commerce application with the following collections:
+
+1. Users (authentication, profile, addresses, order history)
+2. Products (name, description, price, images, inventory, categories)
+3. Categories (hierarchical structure)
+4. Cart (user ID, items, quantities, timestamps)
+5. Orders (user details, items, payment status, shipping info)
+6. Reviews (product ratings and comments)
+
+For each schema, provide:
+- Field names with data types
+- Validation rules
+- Indexes for optimization
+- Relationships between collections
+- Sample document structure in JSON format
+
