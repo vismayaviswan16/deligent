@@ -29,3 +29,226 @@ For each schema, provide:
 - Relationships between collections
 - Sample document structure in JSON format
 
+Prompt 3:
+Generate a complete React.js e-commerce frontend application with the following requirements:
+
+Project Structure:
+- Component-based architecture
+- Pages: Home, Products, Product Detail, Cart, Checkout, Login, Register
+- Reusable components: Navbar, ProductCard, CartItem, Footer
+- Context API for cart state management
+- React Router for navigation
+
+Features:
+- Product listing with search and filter functionality
+- Add to cart with quantity management
+- Responsive design using CSS modules or styled-components
+- Form validation for user inputs
+- API integration with Axios for backend communication
+- Loading states and error handling
+
+Provide the complete folder structure and code for key components including App.js, routing configuration, and context providers.
+
+Prompt 4:
+Create a Node.js backend with Express.js for an e-commerce application with these specifications:
+
+Requirements:
+- RESTful API architecture
+- MongoDB integration using Mongoose
+- JWT-based authentication middleware
+- CORS configuration
+- Environment variable management with dotenv
+- Error handling middleware
+- Input validation and sanitization
+
+API Endpoints:
+1. Auth: /api/auth/register, /api/auth/login, /api/auth/logout
+2. Products: GET, POST, PUT, DELETE for /api/products
+3. Cart: /api/cart (add, remove, update, get)
+4. Orders: /api/orders (create, get user orders)
+5. Users: /api/users/profile
+
+Provide complete code including server setup, routes, controllers, models, and middleware. Include proper folder structure (routes, controllers, models, middleware, config).
+
+
+Prompt 5: 
+
+Create Mongoose models for an e-commerce application with the following schemas:
+
+**User Model:**
+- Fields: name, email (unique), password (hashed), address, phone, role (user/admin)
+- Methods: password comparison, JWT token generation
+- Timestamps
+
+**Product Model:**
+- Fields: name, description, price, images array, category, stock quantity, ratings
+- Virtual for reviews
+- Timestamps
+
+**Order Model:**
+- Fields: user reference, products array (with quantities), total amount, payment status, shipping address, order status
+- Populate user and product details
+
+**Cart Model:**
+- Fields: user reference, items array (product reference, quantity), updated timestamp
+
+Include validation rules, indexes, and pre-save hooks for password hashing [web:17].
+Prompt 6: Complete Feature Implementation
+text
+Build a complete "Add to Cart" feature for a React + Node.js e-commerce application:
+
+Frontend (React):
+- ProductCard component with "Add to Cart" button
+- Cart context for global state management
+- Cart page showing items with quantity controls
+- Update and remove functionality
+- Calculate and display total price
+- API calls to sync with backend
+
+Backend (Node.js):
+- POST /api/cart/add endpoint
+- PUT /api/cart/update endpoint
+- DELETE /api/cart/remove/:itemId endpoint
+- GET /api/cart endpoint
+- Middleware to authenticate user
+- Update cart in MongoDB
+
+Provide complete code for both frontend and backend with proper error handling and validation [web:17].
+Prompts for Specific Components
+Prompt 7: Authentication System
+text
+Implement a complete authentication system for e-commerce application:
+
+Backend:
+- User registration with password hashing (bcrypt)
+- Login endpoint with JWT token generation
+- Protected route middleware
+- Token verification
+- Password validation rules
+
+Frontend:
+- Login form with validation
+- Registration form
+- Protected routes in React Router
+- Store JWT in localStorage or httpOnly cookies
+- Axios interceptor for attaching token to requests
+- Logout functionality
+
+Include security best practices and error handling [web:15][web:18].
+Prompt 8: Product Search and Filter
+text
+Create a product search and filter system:
+
+**Backend:**
+- Search API endpoint with query parameters (search term, category, price range, rating)
+- MongoDB aggregation pipeline for filtering
+- Pagination support
+- Sort options (price, rating, newest)
+
+**Frontend:**
+- Search bar component
+- Filter sidebar with checkboxes and sliders
+- Results display with pagination
+- URL parameter management for shareable filters
+- Loading and empty states
+
+Provide complete implementation with optimized database queries.
+Prompt 9: Responsive UI Components
+text
+Create responsive React components for e-commerce:
+
+1. **Navbar:** Logo, search bar, cart icon with item count, user menu
+2. **ProductCard:** Product image, name, price, rating, "Add to Cart" button
+3. **ProductGrid:** Responsive grid layout (1 column mobile, 2 tablet, 4 desktop)
+4. **CartDrawer:** Sliding cart with items list and checkout button
+5. **Footer:** Links, social media, newsletter signup
+
+Use CSS flexbox/grid for responsive design. Mobile-first approach. Include hover effects and transitions [web:15].
+Prompts for Documentation
+Prompt 10:
+Generate comprehensive API documentation for the e-commerce backend:
+
+For each endpoint, include:
+- HTTP method and URL
+- Description and purpose
+- Request headers (authentication)
+- Request body schema with examples
+- Response codes (200, 201, 400, 401, 404, 500)
+- Response body schema with examples
+- Error handling responses
+
+Format as OpenAPI/Swagger specification or Markdown tables. Include authentication flow documentation [web:19][web:22].
+
+Prompt 11: 
+Create a detailed setup and installation guide for the e-commerce project:
+
+Prerequisites:
+- Node.js version requirements
+- MongoDB Atlas account setup
+- Required npm packages
+
+Backend Setup:
+1. Clone repository
+2. Install dependencies
+3. Configure environment variables (.env.example)
+4. Database connection setup
+5. Run development server
+6. Test API endpoints
+
+Frontend Setup:
+1. Navigate to client folder
+2. Install dependencies
+3. Configure API base URL
+4. Run development server
+5. Build for production
+
+Include troubleshooting section for common issues [web:19].
+
+Prompt 12:
+Write a user manual for the e-commerce website covering:
+
+1. **Getting Started:** Account registration and login
+2. **Browsing Products:** Search, filter, and categories
+3. **Product Details:** View specifications, images, reviews
+4. **Shopping Cart:** Add items, update quantities, remove items
+5. **Checkout Process:** Enter shipping details, payment (if implemented)
+6. **Order Management:** View order history and status
+7. **Profile Management:** Update personal information and addresses
+
+Use clear step-by-step instructions with screenshots placeholders. Audience: end users with basic technical knowledge [web:19][web:22].
+Advanced Feature Prompts
+Prompt 13: Payment Integration
+text
+Integrate Stripe payment gateway into the e-commerce application:
+
+Backend:
+- Install Stripe SDK
+- Create payment intent endpoint
+- Webhook for payment confirmation
+- Update order status after successful payment
+
+Frontend:
+- Stripe Elements integration
+- Payment form component
+- Handle payment success/failure
+- Redirect to order confirmation page
+
+Include security considerations and test mode setup [web:15].
+
+Prompt 14: 
+Build an admin dashboard for managing the e-commerce store:
+
+Features:
+- Product management (CRUD operations)
+- Order management (view, update status)
+- User management (view users, roles)
+- Sales analytics dashboard
+- Inventory tracking
+
+Components
+- Admin login with role-based access
+- Data tables with sorting and filtering
+- Forms for adding/editing products
+- Charts for sales visualization
+
+Provide both frontend React components and backend API endpoints.
